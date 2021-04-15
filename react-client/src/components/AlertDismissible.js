@@ -19,7 +19,7 @@ function AlertDismissible(props) {
                         onClick={() => setShow(false)}
                         variant='outline-success'
                     >
-                        Thanks, I got it.!
+                        Thanks for the Tip!
                     </Button>
                 </div>
             </Alert>

@@ -3,7 +3,7 @@ import React from 'react';
 function IndexScreen() {
     return (
         <div className='App'>
-            <h1>App route</h1>
+            <h1>Technophiles Patient Info Centre</h1>
         </div>
     );
 }
