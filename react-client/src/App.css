@@ -2,6 +2,7 @@
   text-align: center;
   background-color:#61dafb;
   font-family: 'Times New Roman', Times, serif;
+  background-image: "doctor.jpg";
 }
 .icons
 {
@@ -81,4 +82,37 @@ font-family: 'Times New Roman', Times, serif;
 {
   color: #55b5cf;
  
+}
+.buttonsp
+{
+  background-color:whitesmoke;
+  border: solid;
+  color:#6CADDE;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+  width: relative;
+  height:relative;
+}
+.buttonsp:hover
+{
+  color: whitesmoke;
+  background-color:#6CADDE;
+    opacity: 0.8;
+    animation: bounce 1s;
+    border-color: #DDEDF4 ;
+   
+
+}
+.img
+{height: 1px;
+  width: 1px;
+  opacity: 0.5;
+  image-resolution: 100px 100px;
+  mask-image: -o-repeating-linear-gradient();
 }

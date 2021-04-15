@@ -3,6 +3,15 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import axios from "axios";
 import { BiHomeHeart } from "react-icons/bi";
+
+import { FiLogIn } from "react-icons/fi";
+import { FaUserNurse } from "react-icons/fa";
+import { SiGnuprivacyguard } from "react-icons/si";
+
+import { CgBoy } from "react-icons/cg";
+
+import { GiTechnoHeart } from "react-icons/gi";
+import { CgUserList } from "react-icons/cg";
 function AppNavbar(props) {
   const { isLogin, setIsLogin } = props;
   const [isPatient, setPatient] = useState(false);
@@ -65,7 +74,7 @@ function AppNavbar(props) {
         
           <Nav.Link href={isLogin ? `${homeRoute}/home` : homeRoute}>
       
-        <b><div className="home"> <BiHomeHeart className="iconhome" id="icon-home" /> &nbsp; Home   
+        <b><div className="home">&nbsp;&nbsp;&nbsp;<BiHomeHeart className="iconhome" id="icon-home" /> &nbsp;&nbsp;  Home   
         </div>  </b>
              </Nav.Link>
           {isPatient && (
@@ -97,19 +106,19 @@ function AppNavbar(props) {
         {!isLogin ? (
           <>
             <Nav.Link href="/patient/login" className="bt">
-           <b>&nbsp;&nbsp;&nbsp; Patient Login</b>  
+           <b><div className="dec"><FiLogIn className="iconhome" id="icon-home" /> &nbsp;&nbsp;&nbsp; Patient Login</div></b>  
             </Nav.Link>
             &nbsp;&nbsp;
             <Nav.Link href='/patient/create' className="bt">
-            <b>&nbsp;&nbsp;&nbsp;  Patient Signup</b>
+            <b><SiGnuprivacyguard className="iconhome" id="icon-home" />&nbsp;&nbsp;&nbsp;  Patient Signup</b>
             </Nav.Link>
             &nbsp;&nbsp;
             <Nav.Link href="/nurse/login" className="bt">
-            <b>&nbsp;&nbsp;&nbsp;  Nurse Login </b>
+            <b> <CgBoy className="iconhome" id="icon-home" />&nbsp;&nbsp;&nbsp;  Nurse Login </b>
             </Nav.Link>
             &nbsp;&nbsp;
             <Nav.Link href='/nurse/create' className="bt">
-            <b>&nbsp;&nbsp;&nbsp;   Nurse Signup</b>
+            <b><GiTechnoHeart className="iconhome" id="icon-home" />&nbsp;&nbsp;&nbsp;   Nurse Signup</b>
             </Nav.Link>
           </>
         ) : (

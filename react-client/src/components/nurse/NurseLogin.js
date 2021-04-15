@@ -42,6 +42,7 @@ function NurseLogin() {
     return (
         <>
             <h1 className='App'>Nurse Login</h1>
+         
             <Jumbotron>
                 <Form.Group>
                     <Form.Label>Username</Form.Label>
@@ -62,7 +63,7 @@ function NurseLogin() {
                         onChange={(e) => setPassword(e.target.value)}
                     ></Form.Control>
                 </Form.Group>
-                <Button variant='primary' type='submit' onClick={auth}>
+                <Button  variant='primary' type='submit' onClick={auth}>
                     Login
                 </Button>
                 &nbsp;

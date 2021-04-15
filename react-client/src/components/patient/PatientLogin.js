@@ -63,11 +63,11 @@ function Login() {
                         onChange={(e) => setPassword(e.target.value)}
                     ></Form.Control>
                 </Form.Group>
-                <Button variant='primary' type='submit' onClick={auth}>
+                <Button className="buttonsp" variant='primary' type='submit' onClick={auth}>
                     Login
                 </Button>
                 &nbsp;
-                <Button variant='success' href='/'>
+                <Button className="buttonsp" variant='success' href='/'>
                     Cancel
                 </Button>
             </Jumbotron>
