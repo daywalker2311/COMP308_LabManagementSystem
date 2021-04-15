@@ -97,9 +97,9 @@ function CreateNurse() {
                         Create nurse
                     </Button>
                     &nbsp;
-                    <Button variant='primary' href='/nurse/login'>
-                        Have account? Login
-                    </Button>
+                    <Button variant='success' href='/'>
+                        Cancel
+                </Button>
                 </Form>
             </Jumbotron>
         </div>

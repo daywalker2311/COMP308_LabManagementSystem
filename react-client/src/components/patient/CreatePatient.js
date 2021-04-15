@@ -96,9 +96,9 @@ function CreatePatient(props) {
                         Create patient
                     </Button>
                     &nbsp;
-                    <Button variant='primary' href='/patient/login'>
-                        Have account? Login
-                    </Button>
+                    <Button variant='success' href='/'>
+                        Cancel
+                </Button>
                 </Form>
             </Jumbotron>
         </div>

@@ -66,8 +66,8 @@ function NurseLogin() {
                     Login
                 </Button>
                 &nbsp;
-                <Button variant='success' href='/nurse/create'>
-                    New here? Signup
+                <Button variant='success' href='/'>
+                    Cancel
                 </Button>
             </Jumbotron>
         </>
