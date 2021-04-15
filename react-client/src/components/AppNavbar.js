@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import axios from "axios";
-
+import { BiHomeHeart } from "react-icons/bi";
 function AppNavbar(props) {
   const { isLogin, setIsLogin } = props;
   const [isPatient, setPatient] = useState(false);
@@ -62,9 +62,12 @@ function AppNavbar(props) {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
+        
           <Nav.Link href={isLogin ? `${homeRoute}/home` : homeRoute}>
-            Home
-          </Nav.Link>
+      
+        <b><div className="home"> <BiHomeHeart className="iconhome" id="icon-home" /> &nbsp; Home   
+        </div>  </b>
+             </Nav.Link>
           {isPatient && (
             <>
               <Nav.Link href={`${homeRoute}/emergency`}>
@@ -90,22 +93,23 @@ function AppNavbar(props) {
             </>
           )}
         </Nav>
+       
         {!isLogin ? (
           <>
-            <Nav.Link href="/patient/login" className="btn btn-outline-success">
-              Patient Login
+            <Nav.Link href="/patient/login" className="bt">
+           <b>&nbsp;&nbsp;&nbsp; Patient Login</b>  
             </Nav.Link>
             &nbsp;&nbsp;
-            <Nav.Link href='/patient/create' className="btn btn-outline-success">
-              Patient Signup
+            <Nav.Link href='/patient/create' className="bt">
+            <b>&nbsp;&nbsp;&nbsp;  Patient Signup</b>
             </Nav.Link>
             &nbsp;&nbsp;
-            <Nav.Link href="/nurse/login" className="btn btn-outline-primary">
-              Nurse Login
+            <Nav.Link href="/nurse/login" className="bt">
+            <b>&nbsp;&nbsp;&nbsp;  Nurse Login </b>
             </Nav.Link>
             &nbsp;&nbsp;
-            <Nav.Link href='/nurse/create' className="btn btn-outline-success">
-              Nurse Signup
+            <Nav.Link href='/nurse/create' className="bt">
+            <b>&nbsp;&nbsp;&nbsp;   Nurse Signup</b>
             </Nav.Link>
           </>
         ) : (
@@ -118,6 +122,7 @@ function AppNavbar(props) {
         )}
       </Navbar.Collapse>
     </Navbar>
+    
   );
 }
 

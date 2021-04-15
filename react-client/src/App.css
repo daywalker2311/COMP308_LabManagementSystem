@@ -1,7 +1,20 @@
 .App {
   text-align: center;
+  background-color:#61dafb;
+  font-family: 'Times New Roman', Times, serif;
 }
-
+.icons
+{
+  text-align: center;}
+.icons{
+  height: 50px;
+  
+}
+#icon-green
+{
+  height: 50px;
+  width: 50px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -35,4 +48,37 @@
   to {
     transform: rotate(360deg);
   }
+}
+.bod
+{
+  color: #282c34;
+  background-color: #61dafb;
+}
+.home
+{
+  font-size:x-large;
+ height: 50px;
+ color: 	#696969;
+text-align: left;
+border-radius: 10%;
+border-color: #61dafb;
+font-family: 'Times New Roman', Times, serif;
+}
+.bt
+{
+  font-size:x-large;
+  height: 50px;
+  color: black;
+  text-align: left;
+ border-radius: 10%;
+ border-bottom:10px;
+ color:black;
+ color: 	#696969;
+ font-family:'Times New Roman', Times, serif
+ 
+}
+.iconhome
+{
+  color: #55b5cf;
+ 
 }

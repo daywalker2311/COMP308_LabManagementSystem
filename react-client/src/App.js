@@ -7,7 +7,6 @@ import {
 } from "react-router-dom";
 
 import "./App.css";
-
 import Error from "./components/Error";
 import { isUserAuthenticated } from "./Helper";
 import AppNavbar from "./components/AppNavbar";
@@ -29,13 +28,18 @@ import ListPatients from "./components/patient/ListPatients";
 import ListDailyInfo from "./components/patient/ListDailyInfo";
 
 
+import { SiWorldhealthorganization } from "react-icons/si";
+
 const PATIENT_ROUTE_URL = "/patient";
 const NURSE_ROUTE_URL = "/nurse";
 
 function App() {
   const [isLogin, setIsLogin] = useState(isUserAuthenticated());
   return (
-    <>
+    <div className="bod">
+        <div className="icons">
+      <SiWorldhealthorganization className="icon" id="icon-green" />
+      </div>
       <AppNavbar isLogin={isLogin} setIsLogin={setIsLogin} />
       <Router>
         <Switch>
@@ -202,7 +206,9 @@ function App() {
           <Route path="*" render={() => <Error />} />
         </Switch>
       </Router>
-    </>
+    
+    </div>
+    
   );
 }
 
