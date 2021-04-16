@@ -52,6 +52,7 @@ function CreateTip() {
     }, []);
     return (
         <div>
+            <h1>Send Motivational Tip to Patients</h1>
             {showLoading && (
                 <Spinner animation='border' role='status'>
                     <span className='sr-only'>Loading...</span>

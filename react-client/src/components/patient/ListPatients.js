@@ -38,6 +38,7 @@ function ListPatients(props) {
 
     return (
         <div>
+            <h1>List of Patients</h1>
             {showLoading && (
                 <Spinner animation='border' role='status'>
                     <span className='sr-only'>Loading...</span>
