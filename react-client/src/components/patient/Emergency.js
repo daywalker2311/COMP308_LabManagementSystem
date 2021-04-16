@@ -7,7 +7,7 @@ function Emergency() {
   return (
     <>
       {isUserAuthenticated() ? (
-        <div className="App">This is Emergency route for patient</div>
+        <div className="App">Emergency route for patient goes here</div>
       ) : (
         <Redirect to="/patient" />
       )}

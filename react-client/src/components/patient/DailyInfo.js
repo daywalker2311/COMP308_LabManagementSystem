@@ -7,6 +7,7 @@ import Button from "react-bootstrap/Button";
 import axios from "axios";
 import { apiUrl } from "../../Helper";
 import "../../App.css";
+import logo from '../../images/dailyinfo.jpg';
 
 function DailyPatientInfo() {
 
@@ -56,6 +57,7 @@ function DailyPatientInfo() {
   };
   return (
     <>
+      <img src={logo} style={{ width: '70%', height: '20%' }} alt="Logo" />;
       <Jumbotron style={{ width: '70%' }}>
         <Form onSubmit={saveDailyPatientInfo}>
           <Form.Group>

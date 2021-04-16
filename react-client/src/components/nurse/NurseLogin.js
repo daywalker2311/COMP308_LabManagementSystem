@@ -61,6 +61,7 @@ function NurseLogin() {
                         type='password'
                         name='password'
                         id='password'
+                        placeholder='password'
                         onChange={(e) => setPassword(e.target.value)}
                     ></Form.Control>
                 </Form.Group>

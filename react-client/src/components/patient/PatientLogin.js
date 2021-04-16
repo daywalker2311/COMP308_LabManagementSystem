@@ -51,7 +51,7 @@ function Login() {
                         type='email'
                         name='email'
                         id='email'
-                        placeholder='example@example.ca'
+                        placeholder='something@something.something'
                         onChange={(e) => setEmail(e.target.value)}
                     ></Form.Control>
                 </Form.Group>
@@ -61,6 +61,7 @@ function Login() {
                         type='password'
                         name='password'
                         id='password'
+                        placeholder='password'
                         onChange={(e) => setPassword(e.target.value)}
                     ></Form.Control>
                 </Form.Group>

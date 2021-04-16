@@ -82,7 +82,7 @@ function CheckList() {
       ) : (
         <>
           {result == null ? (
-            <Table striped bordered hover size="sm">
+            <Table bordered hover size="sm" style={{ width: '70%' }}>
               <thead>
                 <tr>
                   <th>#</th>
@@ -110,7 +110,7 @@ function CheckList() {
                 ))}
                 {/* Check box end */}
               </tbody>
-              <Button variant="success" onClick={submitDiagnose}>
+              <Button class="buttonsp" onClick={submitDiagnose}>
                 Submit
               </Button>
             </Table>
@@ -125,7 +125,7 @@ function CheckList() {
                   <hr></hr>
                   <h5>Description</h5>
                   <p className="card-text">{result.description}</p>
-                  <Button variant="success" onClick={resetResult}>
+                  <Button class="buttonsp" onClick={resetResult}>
                     diagnose again
                   </Button>
                 </div>

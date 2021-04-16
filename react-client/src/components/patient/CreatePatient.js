@@ -41,6 +41,7 @@ function CreatePatient(props) {
     };
     return (
         <div>
+            <h1 className='App'>Patient Signup</h1>
             {showLoading && (
                 <Spinner animation='border' role='status'>
                     <span className='sr-only'>Loading...</span>

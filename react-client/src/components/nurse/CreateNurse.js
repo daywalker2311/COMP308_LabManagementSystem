@@ -42,6 +42,7 @@ function CreateNurse() {
     };
     return (
         <div>
+            <h1 className='App'>Nurse Signup</h1>
             {showLoading && (
                 <Spinner animation='border' role='status'>
                     <span className='sr-only'>Loading...</span>

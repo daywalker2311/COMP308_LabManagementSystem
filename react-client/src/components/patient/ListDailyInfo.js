@@ -5,6 +5,7 @@ import ListGroup from 'react-bootstrap/ListGroup';
 import { withRouter, Redirect } from 'react-router-dom';
 import { apiUrl } from "../../Helper";
 import "../../App.css";
+import logo from '../../images/dailyinfo.jpg';
 
 function ListDailyInfo(props) {
     const [data, setData] = useState([]);
@@ -39,6 +40,8 @@ function ListDailyInfo(props) {
 
     return (
         <div>
+            <img src={logo} alt="Logo" />
+
             {showLoading && (
                 <Spinner animation='border' role='status'>
                     <span className='sr-only'>Loading...</span>
