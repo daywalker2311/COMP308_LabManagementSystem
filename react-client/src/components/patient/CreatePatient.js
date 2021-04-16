@@ -5,6 +5,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { withRouter } from 'react-router-dom';
+import "../../App.css";
 
 function CreatePatient(props) {
     const [patient, setPatient] = useState({
@@ -45,7 +46,7 @@ function CreatePatient(props) {
                     <span className='sr-only'>Loading...</span>
                 </Spinner>
             )}
-            <Jumbotron>
+            <Jumbotron style={{ width: '70%' }}>
                 <Form onSubmit={saveUser}>
                     <Form.Group>
                         <Form.Label> First Name</Form.Label>
@@ -92,11 +93,11 @@ function CreatePatient(props) {
                             onChange={onChange}
                         />
                     </Form.Group>
-                    <Button variant='success' type='submit'>
+                    <Button class="buttonsp" type='submit'>
                         Create patient
                     </Button>
                     &nbsp;
-                    <Button variant='success' href='/'>
+                    <Button class="buttonsp" href='/'>
                         Cancel
                 </Button>
                 </Form>

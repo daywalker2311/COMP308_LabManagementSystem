@@ -6,20 +6,21 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
 import { apiUrl } from "../../Helper";
+import "../../App.css";
 
-function DailyInfo() {
-  
+function DailyPatientInfo() {
+
   const currentUrl = window.location.pathname;
   let homeRoute = currentUrl.includes("/patient")
-  ? "/patient"
-  : currentUrl.includes("/nurse")
-  ? "/nurse"
-  : "/";
-  
+    ? "/patient"
+    : currentUrl.includes("/nurse")
+      ? "/nurse"
+      : "/";
+
   const patientID = sessionStorage.getItem("patientId");
   const created_by = sessionStorage.getItem("created_by");
 
-  const [dailyInfo, setDailyInfo] = useState({
+  const [dailyPatientInfo, setDailyPatientInfo] = useState({
     pulseRate: "",
     bloodPressure: "",
     weight: "",
@@ -27,19 +28,19 @@ function DailyInfo() {
     respiratoryRate: "",
   });
 
-  const saveDailyInfo = () => {
+  const saveDailyPatientInfo = () => {
     const data = {
-      pulseRate: dailyInfo.pulseRate,
-      bloodPressure: dailyInfo.bloodPressure,
-      weight: dailyInfo.weight,
-      temperature: dailyInfo.temperature,
-      respiratoryRate: dailyInfo.respiratoryRate,
+      pulseRate: dailyPatientInfo.pulseRate,
+      bloodPressure: dailyPatientInfo.bloodPressure,
+      weight: dailyPatientInfo.weight,
+      temperature: dailyPatientInfo.temperature,
+      respiratoryRate: dailyPatientInfo.respiratoryRate,
       patient: patientID,
       created_by: created_by
     };
 
     axios
-      .post(`${apiUrl}dailyInfo`, data)
+      .post(`${apiUrl}dailyPatientInfo`, data)
       .then((res) => {
         console.log(res);
         window.location.href = `${homeRoute}/home`;
@@ -51,12 +52,12 @@ function DailyInfo() {
 
   const onChange = (e) => {
     e.persist();
-    setDailyInfo({ ...dailyInfo, [e.target.name]: e.target.value });
+    setDailyPatientInfo({ ...dailyPatientInfo, [e.target.name]: e.target.value });
   };
   return (
     <>
-      <Jumbotron>
-        <Form onSubmit={saveDailyInfo}>
+      <Jumbotron style={{ width: '70%' }}>
+        <Form onSubmit={saveDailyPatientInfo}>
           <Form.Group>
             <Form.Label>Pulse Rate</Form.Label>
             <Form.Control
@@ -64,7 +65,7 @@ function DailyInfo() {
               name="pulseRate"
               id="pulseRate"
               placeholder="Enter pulse rate"
-              value={dailyInfo.pulseRate}
+              value={dailyPatientInfo.pulseRate}
               onChange={onChange}
             />
           </Form.Group>
@@ -75,7 +76,7 @@ function DailyInfo() {
               name="bloodPressure"
               id="bloodPressure"
               placeholder="Enter blood pressure"
-              value={dailyInfo.bloodPressure}
+              value={dailyPatientInfo.bloodPressure}
               onChange={onChange}
             />
           </Form.Group>
@@ -86,7 +87,7 @@ function DailyInfo() {
               name="weight"
               id="weight"
               placeholder="Enter weight"
-              value={dailyInfo.weight}
+              value={dailyPatientInfo.weight}
               onChange={onChange}
             />
           </Form.Group>
@@ -97,7 +98,7 @@ function DailyInfo() {
               name="temperature"
               id="temperature"
               placeholder="Enter temperature"
-              value={dailyInfo.temperature}
+              value={dailyPatientInfo.temperature}
               onChange={onChange}
             />
           </Form.Group>
@@ -108,7 +109,7 @@ function DailyInfo() {
               name="respiratoryRate"
               id="respiratoryRate"
               placeholder="Enter respiratory rate"
-              value={dailyInfo.respiratoryRate}
+              value={dailyPatientInfo.respiratoryRate}
               onChange={onChange}
             />
           </Form.Group>
@@ -121,4 +122,4 @@ function DailyInfo() {
   );
 }
 
-export default DailyInfo;
+export default DailyPatientInfo;

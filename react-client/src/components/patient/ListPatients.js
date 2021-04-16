@@ -4,7 +4,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { withRouter } from 'react-router-dom';
 import { apiUrl } from "../../Helper";
-
+import "../../App.css";
 
 function ListPatients(props) {
     const [data, setData] = useState([]);
@@ -35,7 +35,7 @@ function ListPatients(props) {
             pathname: '/nurse/listAllDailyInfoById/' + patientID,
         });
     };
-    
+
     return (
         <div>
             {showLoading && (
@@ -48,7 +48,7 @@ function ListPatients(props) {
                     <ListGroup.Item
                         key={idx}
                         action
-                        onClick={() => { showDetail(item._id)}}
+                        onClick={() => { showDetail(item._id) }}
                     >
                         {item.fullName}
                     </ListGroup.Item>

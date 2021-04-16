@@ -1,6 +1,5 @@
 // Load the module dependencies
 const Patient = require("mongoose").model("Patient");
-const Video = require("mongoose").model("Video");
 const DailyInfo = require("mongoose").model("PatientInfo");
 
 const Diagnosis = require("mongoose").model("Diagnose");
@@ -107,20 +106,6 @@ exports.listAllDailyInfoById = function (req, res, next, patientId) {
       res.json(dailyInfos);
     }
   });
-};
-
-// Returns all videos in db
-exports.listVideos = function (req, res, next) {
-  // get all video in db, sort it by title in ascending order
-  Video.find()
-    .sort({ title: "ascending" })
-    .exec((err, videos) => {
-      if (err) {
-        return res.status(500).json(err);
-      } else {
-        res.json(videos);
-      }
-    });
 };
 
 //populate checkList page to the patient

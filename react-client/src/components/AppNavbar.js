@@ -71,12 +71,12 @@ function AppNavbar(props) {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-        
+
           <Nav.Link href={isLogin ? `${homeRoute}/home` : homeRoute}>
-      
-        <b><div className="home">&nbsp;&nbsp;&nbsp;<BiHomeHeart className="iconhome" id="icon-home" /> &nbsp;&nbsp;  Home   
+
+            <b><div className="home">&nbsp;&nbsp;&nbsp;<BiHomeHeart className="iconhome" id="icon-home" /> &nbsp;&nbsp;  Home
         </div>  </b>
-             </Nav.Link>
+          </Nav.Link>
           {isPatient && (
             <>
               <Nav.Link href={`${homeRoute}/emergency`}>
@@ -89,7 +89,7 @@ function AppNavbar(props) {
                 List Vital Signs
               </Nav.Link>
               <Nav.Link href={`${homeRoute}/videolist`}>
-                Motivation Video
+                Motivational Videos
               </Nav.Link>
               <Nav.Link href={`${homeRoute}/checklist`}>Check List</Nav.Link>
             </>
@@ -102,23 +102,23 @@ function AppNavbar(props) {
             </>
           )}
         </Nav>
-       
+
         {!isLogin ? (
           <>
             <Nav.Link href="/patient/login" className="bt">
-           <b><div className="dec"><FiLogIn className="iconhome" id="icon-home" /> &nbsp;&nbsp;&nbsp; Patient Login</div></b>  
+              <b><div className="dec"><FiLogIn className="iconhome" id="icon-home" /> &nbsp;&nbsp;&nbsp; Patient Login</div></b>
             </Nav.Link>
             &nbsp;&nbsp;
             <Nav.Link href='/patient/create' className="bt">
-            <b><SiGnuprivacyguard className="iconhome" id="icon-home" />&nbsp;&nbsp;&nbsp;  Patient Signup</b>
+              <b><SiGnuprivacyguard className="iconhome" id="icon-home" />&nbsp;&nbsp;&nbsp;  Patient Signup</b>
             </Nav.Link>
             &nbsp;&nbsp;
             <Nav.Link href="/nurse/login" className="bt">
-            <b> <CgBoy className="iconhome" id="icon-home" />&nbsp;&nbsp;&nbsp;  Nurse Login </b>
+              <b> <CgBoy className="iconhome" id="icon-home" />&nbsp;&nbsp;&nbsp;  Nurse Login </b>
             </Nav.Link>
             &nbsp;&nbsp;
             <Nav.Link href='/nurse/create' className="bt">
-            <b><GiTechnoHeart className="iconhome" id="icon-home" />&nbsp;&nbsp;&nbsp;   Nurse Signup</b>
+              <b><GiTechnoHeart className="iconhome" id="icon-home" />&nbsp;&nbsp;&nbsp;   Nurse Signup</b>
             </Nav.Link>
           </>
         ) : (
@@ -131,7 +131,7 @@ function AppNavbar(props) {
         )}
       </Navbar.Collapse>
     </Navbar>
-    
+
   );
 }
 

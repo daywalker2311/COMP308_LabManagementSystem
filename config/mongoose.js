@@ -19,7 +19,6 @@ module.exports = function () {
     // Load model
     require('../app/models/nurse.server.model');
     require('../app/models/patient.server.model');
-    require('../app/models/video.server.model');
     require('../app/models/daily_motivational_tip.server.model');
     require('../app/models/patient_info.server.model');
 

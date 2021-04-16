@@ -4,6 +4,7 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
+import "../../App.css";
 
 function NurseLogin() {
     const [username, setUsername] = useState('');
@@ -42,8 +43,8 @@ function NurseLogin() {
     return (
         <>
             <h1 className='App'>Nurse Login</h1>
-         
-            <Jumbotron>
+
+            <Jumbotron style={{ width: '70%' }}>
                 <Form.Group>
                     <Form.Label>Username</Form.Label>
                     <Form.Control
@@ -63,11 +64,11 @@ function NurseLogin() {
                         onChange={(e) => setPassword(e.target.value)}
                     ></Form.Control>
                 </Form.Group>
-                <Button  variant='primary' type='submit' onClick={auth}>
+                <Button class="buttonsp" type='submit' onClick={auth}>
                     Login
                 </Button>
                 &nbsp;
-                <Button variant='success' href='/'>
+                <Button class="buttonsp" href='/'>
                     Cancel
                 </Button>
             </Jumbotron>

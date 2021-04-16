@@ -83,9 +83,20 @@ font-family: 'Times New Roman', Times, serif;
   color: #55b5cf;
  
 }
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin-left: 50px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+
 .buttonsp
 {
-  background-color:whitesmoke;
+  background-color:black;
   border: solid;
   color:#6CADDE;
   padding: 15px 32px;

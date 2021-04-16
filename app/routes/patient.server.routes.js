@@ -15,10 +15,6 @@ module.exports = function (app) {
 
     app.route(PATIENT_API + '/login').post(patientController.authenticate);
 
-    //populate list of videos
-    app.route(PATIENT_API + '/videos')
-        .get(patientController.listVideos);
-
     app.param('patientId', patientController.listAllDailyInfoById);
 
     app.route(API + '/listAllDailyInfoById/:patientId')
@@ -28,7 +24,7 @@ module.exports = function (app) {
         .get(patientController.checkList)
         .post(patientController.diagnose);
 
-    app.route(API + '/dailyInfo')
+    app.route(API + '/dailyPatientInfo')
         .post(patientInfoController.saveDailyInfo);
 
 };

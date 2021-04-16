@@ -8,6 +8,7 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
+import "../../App.css";
 
 function CheckList() {
   const [isLoading, setLoading] = useState(true);
@@ -132,7 +133,7 @@ function CheckList() {
             </div>
           )}
 
-          {/* </Jumbotron> */}
+          {/* <Jumbotron style={{ width: '70%' }}> */}
         </>
       )}
     </>

@@ -4,18 +4,19 @@ import Spinner from 'react-bootstrap/Spinner';
 import ListGroup from 'react-bootstrap/ListGroup';
 import { withRouter, Redirect } from 'react-router-dom';
 import { apiUrl } from "../../Helper";
+import "../../App.css";
 
 function ListDailyInfo(props) {
     const [data, setData] = useState([]);
     const [showLoading, setShowLoading] = useState(true);
     const [listError, setListError] = useState(false);
-    
+
     const currentUrl = window.location.pathname;
     let homeRoute = currentUrl.includes("/patient")
-    ? "/patient"
-    : currentUrl.includes("/nurse")
-    ? "/nurse"
-    : "/";
+        ? "/patient"
+        : currentUrl.includes("/nurse")
+            ? "/nurse"
+            : "/";
 
     const patientID = props.match.params.patientId;
 
@@ -35,7 +36,7 @@ function ListDailyInfo(props) {
         };
         fetchData();
     }, []);
-    
+
     return (
         <div>
             {showLoading && (
@@ -44,7 +45,7 @@ function ListDailyInfo(props) {
                 </Spinner>
             )}
             <div className="text-center">
-                <a className="btn btn-success" href={`${homeRoute}/dailyInfo`}>Enter Today's Vital Signs</a> 
+                <a className="btn btn-success" href={`${homeRoute}/dailyInfo`}>Enter Today's Vital Signs</a>
                 <br></br>
                 <br></br>
                 {data.map((item, idx) => (
@@ -57,7 +58,7 @@ function ListDailyInfo(props) {
                         <div>{'Created By ' + item.created_by}</div>
                         <div>{'Created: ' + item.created}</div>
                         <br></br>
-                    </div>                        
+                    </div>
                 ))}
             </div>
         </div>

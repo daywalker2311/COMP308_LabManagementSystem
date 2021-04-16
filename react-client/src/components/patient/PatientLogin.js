@@ -5,6 +5,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import { isPatientAuthenticated } from '../../Helper';
+import "../../App.css";
 
 function Login() {
     const [email, setEmail] = useState('');
@@ -43,7 +44,7 @@ function Login() {
     return (
         <>
             <h1 className='App'>Patient Login</h1>
-            <Jumbotron>
+            <Jumbotron style={{ width: '70%' }}>
                 <Form.Group>
                     <Form.Label>Email</Form.Label>
                     <Form.Control
@@ -63,11 +64,11 @@ function Login() {
                         onChange={(e) => setPassword(e.target.value)}
                     ></Form.Control>
                 </Form.Group>
-                <Button className="buttonsp" variant='primary' type='submit' onClick={auth}>
+                <Button class="buttonsp" type='submit' onClick={auth}>
                     Login
                 </Button>
                 &nbsp;
-                <Button className="buttonsp" variant='success' href='/'>
+                <Button class="buttonsp" href='/'>
                     Cancel
                 </Button>
             </Jumbotron>

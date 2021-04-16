@@ -3,6 +3,7 @@ import { isUserAuthenticated } from '../../Helper';
 import { Redirect } from 'react-router-dom';
 import axios from 'axios';
 import AlertDismissible from '../AlertDismissible';
+import "../../App.css";
 
 function PatientHomePage() {
     const [tipList, setTipList] = useState([]);
